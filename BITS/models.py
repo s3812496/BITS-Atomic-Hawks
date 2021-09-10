@@ -25,7 +25,7 @@ class Song(models.Model):
     title = models.CharField(max_length=200)
     album = models.ForeignKey(Album, on_delete=models.CASCADE)
     artist = models.ForeignKey(Artist, on_delete=models.CASCADE)
-    description = models.TextField()
+    lryics = models.TextField()
     release_date = models.DateField()
     length_min = models.FloatField()
     producer = models.CharField(max_length=1000)
