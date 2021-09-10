@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'AtmoicHawks.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'atomic_hawks',
+        'NAME': 'atomic_hawks_new',
         'USER': 'DB_connect',
         'PASSWORD': 'dbadmin123456',
         'HOST': '192.168.1.30',
