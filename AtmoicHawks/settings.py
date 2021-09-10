@@ -130,6 +130,9 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "templates",
-    'BITS/templates',
+    BASE_DIR / "assets",
+    'BITS/templates/assets',
+
+    BASE_DIR / "images",
+    'BITS/templates/images',
 ]
