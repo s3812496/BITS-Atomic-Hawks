@@ -5,7 +5,7 @@
 		<title>Atomic Hawks Website</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
 	</head>
 	<body class="is-preload">
 
@@ -14,7 +14,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.html">ATOMIC HAWKS</a></h1>
+						<h1><a href="nathans.freeddns.org:8000">ATOMIC HAWKS</a></h1>
 						<nav class="links">
 							<ul>
 								<li><a href="#">About</a></li>
@@ -50,7 +50,7 @@
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2015-10-18">October 18, 2015</time>
-										<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
+										<a href="#" class="author"><span class="name">Jane Doe</span><img src="{% static 'images/avatar.jpg' %}" alt="" /></a>
 									</div>
 								</header>
 
@@ -360,7 +360,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 						<!-- Intro -->
 							<section id="intro">
-								<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+								<a href="#" class="logo"><img src="{% static 'images/logo.jpg' %}" alt="" /></a>
 								<header>
 									<h2>Atomic Hawks&nbsp;</h2>
 									<p>Welcome to Atomic hawks</p>
@@ -375,9 +375,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										<article class="mini-post">
 											<header>
 												<h3><a href="single.html">album 1&nbsp;</a></h3>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+												<a href="#" class="author"><img src="{% static 'images/avatar.jpg' %}" alt="" /></a>
 											</header>
-											<a href="single.html" class="image"><img src="images/pic04.jpg" alt="" /></a>
+											<a href="single.html" class="image"><img src="{% static 'images/pic04.jpg' %}" alt="" /></a>
 										</article>
 
 									<!-- Mini Post -->
@@ -385,9 +385,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											<header>
 												<h3><a href="single.html">Rutrum neque accumsan</a></h3>
 												<time class="published" datetime="2015-10-19">October 19, 2015</time>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+												<a href="#" class="author"><img src="{% static 'images/avatar.jpg' %}" alt="" /></a>
 											</header>
-											<a href="single.html" class="image"><img src="images/pic05.jpg" alt="" /></a>
+											<a href="single.html" class="image"><img src="{% static 'images/pic05.jpg' %}" alt="" /></a>
 										</article>
 
 									<!-- Mini Post -->
@@ -395,9 +395,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											<header>
 												<h3><a href="single.html">Odio congue mattis</a></h3>
 												<time class="published" datetime="2015-10-18">October 18, 2015</time>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+												<a href="#" class="author"><img src="{% static 'images/avatar.jpg' %}" alt="" /></a>
 											</header>
-											<a href="single.html" class="image"><img src="images/pic06.jpg" alt="" /></a>
+											<a href="single.html" class="image"><img src="{% static 'images/pic06.jpg' %}" alt="" /></a>
 										</article>
 
 									<!-- Mini Post -->
@@ -405,9 +405,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											<header>
 												<h3><a href="single.html">Enim nisl veroeros</a></h3>
 												<time class="published" datetime="2015-10-17">October 17, 2015</time>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+												<a href="#" class="author"><img src="{% static 'images/avatar.jpg' %}" alt="" /></a>
 											</header>
-											<a href="single.html" class="image"><img src="images/pic07.jpg" alt="" /></a>
+											<a href="single.html" class="image"><img src="{% static 'images/pic07.jpg' %}" alt="" /></a>
 										</article>
 
 								</div>
@@ -428,11 +428,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
 
 	</body>
 </html>
