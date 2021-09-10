@@ -20,6 +20,3 @@ class Song(models.Model):
     release_date = models.DateField()
     length_min = models.FloatField()
     producer = models.CharField(max_length=1000)
-
-
-
