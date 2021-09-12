@@ -8,5 +8,6 @@ urlpatterns = [
     path('album/<int:Album_id>', views.album_by_id, name='album_by_id'),
     path('contactus/', views.contactus, name='contactus'),
     path('allartists/', views.all_artists, name='allartists'),
+    path('allalbum/', views.all_album, name='allalbum'),
     path('', views.index, name='index'),
 ]

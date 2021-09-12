@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+
+<h1>Albums: </h1>
+
+<table>
+        {% for Album in ABLst %}
+        <tr>     
+            <td><a href="../album/{{Album.id}}">{{album.title}}: <br><img src="{{Album.image.url}}" alt="Album Cover Image" width="180px"></td></a> 
+        </tr>   
+        {% endfor %}
+</table>
+
+
+{% endblock %}

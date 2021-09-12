@@ -31,3 +31,8 @@ def all_artists(request):
     ARTLst = Artist.objects.all()
     context=context = {'ARTLst':ARTLst}
     return render(request, 'all_artists.html', context=context)
+
+def all_album(request):
+    ABLst = Album.objects.all()
+    context=context = {'ABLst':ABLst}
+    return render(request, 'all_albums.html', context=context)
