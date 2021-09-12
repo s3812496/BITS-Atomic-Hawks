@@ -6,13 +6,11 @@
 <h1>Artists: </h1>
 
 <table>
-    <tr>
         {% for Artist in ARTLst %}
-        <td>     
+        <tr>     
            <a href="./album/{{Album.id}}"><td>{{Artist.title}}: <br> <img src="{{Artist.image.url}}" alt="Artist Cover Image" width="180px"></td></a>
-        </td>   
+        </tr>   
         {% endfor %}
-    </tr>
 </table>
 
 
