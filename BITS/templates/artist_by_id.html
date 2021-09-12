@@ -8,7 +8,7 @@
 
     <img src="{{Artist.image.url}}" height="200px"  alt="{{Artist.title}}"><br>
 
-    {% for ABLst in Album %}
+    {% for Album in ABLst %}
         TEST LAMO
         {% if Album.artist.id == Artist.id %}
             <a href="album/{{Album.id}}"><img src="Album.image.id" alt="{{Album.title}}" height="100px"></a>
