@@ -3,8 +3,6 @@
 
 {% block content %}
 <!DOCTYPE html>
-
-<body>
     <h1>{{Artist.title}}</h1>
 
     <img src="{{Artist.image.url}}" height="200px"  alt="{{Artist.title}}"><br>
@@ -18,5 +16,4 @@
             <a href="../album/{{Album.id}}"><img src="{{Album.image.url}}" alt="{{Album.title}}" height="100px"></a>
         {% endif %}
     {% endfor %}
-</body>
 {% endblock %}
