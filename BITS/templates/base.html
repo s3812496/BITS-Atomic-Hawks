@@ -35,10 +35,9 @@
 					</header>
 
 				<!-- Sidebar -->
-                <section id="sidebar">
-                
-
-
+                <section id="main">
+                    {% block content %}
+                    {% endblock %}
                 </section>
 
 
@@ -55,9 +54,6 @@
                             <p class="copyright">&copy; Atomic Hawks</a>
 
             </div>
-
-            {% block content %}
-            {% endblock %}
 
     <!-- Scripts -->
         <script src="{% static 'assets/js/jquery.min.js' %}"></script>
