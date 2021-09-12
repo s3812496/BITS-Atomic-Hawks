@@ -1,9 +1,10 @@
+{% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
 <!DOCTYPE html>
 
-<body>
+
     <h1>Title: {{Album.title}}</h1>
 
     <img src="{{Album.image.url}}" alt="Album Art: {{Album.title}}" height="180px"><br>
@@ -25,5 +26,4 @@
 
     <p>Spotify: <iframe src="https://open.spotify.com/embed/album/{{Album.Spotify_Embeded_Code}}" width="15%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe></p>
 
-</body>
 {% endblock %}
