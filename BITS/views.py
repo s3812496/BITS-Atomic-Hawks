@@ -26,3 +26,8 @@ def album_by_id(request, Album_id):
     album = Album.objects.get(pk=Album_id)
     context=context = {'Album':album, 'SNGst' :SNGst}
     return render(request, 'album_by_id.html', context=context)
+
+def all_artists(request):
+    ARTLst = Artist.objects.all()
+    context=context = {'ARTLst':ARTLst}
+    return render(request, 'all_artists.html', context=context)

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+
+<h1>Artists: </h1>
+
+<table>
+    <tr>
+        
+        {% for Artist in ARTLst %}     
+            {& i = 0 %}
+
+            {% if i|divisibleby:3 %}
+                </tr>
+                    <td>{{Artist.title}}: <br> <img src="{{Artist.image.url}}" alt="Artist Cover Image" width="180px"></td>
+                <tr>
+            {% endif %}
+            <td>{{Artist.title}}: <br> <img src="{{Artist.image.url}}" alt="Artist Cover Image" width="180px"></td>        
+        {% endfor %}
+
+
+    </tr>
+</table>
+
+
+{% endblock %}

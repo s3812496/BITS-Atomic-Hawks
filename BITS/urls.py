@@ -7,5 +7,6 @@ urlpatterns = [
     path('artist/<int:Artist_id>', views.artist_by_id, name='artist_by_id'),
     path('album/<int:Album_id>', views.album_by_id, name='album_by_id'),
     path('contactus/', views.contactus, name='contactus'),
+    path('allartists/', views.all_artists, name='allartists'),
     path('', views.index, name='index'),
 ]
