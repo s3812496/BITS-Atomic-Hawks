@@ -7,5 +7,11 @@
     <h1>{{Artist.title}}</h1>
 
     <img src="{{Artist.image.url}}" height="200px"  alt="{{Artist.title}}"><br>
+
+    {% for id in Album %}
+        {% if Album.artist.id == Artist.id %}
+            <a href="album/{{Album.id}}"><img src="Album.image.id" alt="{{Album.title}}" height="100px"></a>
+        {% endif %}
+    {% endfor %}
 </body>
 {% endblock %}
