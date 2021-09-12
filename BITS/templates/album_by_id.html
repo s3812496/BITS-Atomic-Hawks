@@ -1,0 +1,29 @@
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+
+<body>
+    <h1>Title: {{Album.title}}</h1>
+
+    <img src="{{Album.image.url}}" alt="Album Art: {{Album.title}}" height="180px"><br>
+
+    <a href="../artist/{{Album.artsit.id}}"><h3>Artist: {{Album.artist.title}}</h3></a>
+
+    <h3>Description:</h3>
+    <p>{{Album.description}}</p>
+
+    <h3>Release Date: {{Album.release_date}}</h3>
+
+    <h3>Song List:</h3>
+
+{% for Song in SNGst %}
+    {% if Song.album.id == Album.id %}
+        <a href="../song/{{Song.id}}">{{Song.title}}</a><br>
+    {% endif %}
+{% endfor %}
+
+    <p>Spotify: <iframe src="https://open.spotify.com/embed/track/{{Album.Spotify_Embeded_Code}}" width="15%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe></p>
+
+</body>
+{% endblock %}
