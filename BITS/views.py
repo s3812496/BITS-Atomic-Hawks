@@ -11,4 +11,4 @@ def index(request):
 def song_by_id(request, Song_id):
     song = Song.objects.get(pk=Song_id)
     context=context = {'Song':Song}
-    return HttpResponse("{Song.title}")
+    return render(request, 'song_by_id.html', context=context)
