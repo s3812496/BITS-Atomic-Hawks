@@ -8,5 +8,6 @@ def index(request):
     return render(request, 'index.html')
 
 def song_by_id(request, Song_id):
-    Song = Song.objects.get(pk=Song_id)
+    song = Song.objects.get(pk=Song_id)
+    context=context = {'Song':Song}
     return render(request, 'index.html')
