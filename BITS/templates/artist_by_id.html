@@ -13,7 +13,7 @@
     <h2>Albums:</h2>
     {% for Album in ABLst %}
         {% if Album.artist.id == Artist.id %}
-            <a href="../album/{{Album.id}}"><img src="{{Album.image.url}}" alt="{{Album.title}}" height="100px"></a>
+            <a href="../album/{{Album.id}}"><img src="{{Album.image.url}}" alt="{{Album.title}}" height="200px"></a>
         {% endif %}
     {% endfor %}
 {% endblock %}
