@@ -4,9 +4,12 @@
 <!DOCTYPE html>
 
 <body>
-    <p>Title: {{Song.title}}</p>
+    <h1>Title: {{Song.title}}</h1>
 
     <img src="{{Song.album.image.url}}" alt="Cover Art for: {{Song.album.title}}" height="180px">
+
+    <h2>Lryics:</h2>
+    <p>{{Song.lyrics}}</p>
 
     <p>Spotify: <iframe src="https://open.spotify.com/embed/track/{{Song.Spotify_Embeded_Code}}" width="15%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe></p>
 
