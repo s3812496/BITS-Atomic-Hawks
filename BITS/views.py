@@ -36,3 +36,6 @@ def all_album(request):
     ABLst = Album.objects.all()
     context=context = {'ABLst':ABLst}
     return render(request, 'all_albums.html', context=context)
+
+def about_us(request):
+    return render(request, 'about_us.html')
