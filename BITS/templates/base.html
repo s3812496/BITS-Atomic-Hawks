@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+		<title>Atomic Hawks Website</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../">ATOMIC HAWKS</a></h1>
+						<nav class="links">
+							<ul>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Albums</a></li>
+								<li><a href="#">Artists</a></li>
+								<li><a href="/contactus">Contact Us</a></li>
+							</ul>
+						</nav>
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								
+						</nav>
+					</header>
+
+				<!-- Sidebar -->
+                <section id="sidebar">
+
+                    <!-- Intro -->
+                        <section id="intro">
+                            <a href="#" class="logo"><img src="{% static 'images/logo.jpg' %}" alt="" /></a>
+                            <header>
+                                <h2>Atomic Hawks&nbsp;</h2>
+                                <p>Welcome to Atomic hawks</p>
+                            </header>
+                        </section>
+
+
+                        <section>
+                            {% block content %}
+                            {% endblock %}
+                        </section>
+
+                    
+                    <!-- Footer -->
+                        <section id="footer">
+                            <ul class="icons">
+                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+                                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                            </ul>
+                            <p class="copyright">&copy; Atomic Hawks</a>
+
+        </div>
+
+    <!-- Scripts -->
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/browser.min.js' %}"></script>
+        <script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+        <script src="{% static 'assets/js/util.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+</html>
