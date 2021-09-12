@@ -36,21 +36,12 @@
 
 				<!-- Sidebar -->
                 <section id="sidebar">
+                
+                    {% block content %}
+                    {% endblock %}
 
-                    <!-- Intro -->
-                        <section id="intro">
-                            <a href="#" class="logo"><img src="{% static 'images/logo.jpg' %}" alt="" /></a>
-                            <header>
-                                <h2>Atomic Hawks&nbsp;</h2>
-                                <p>Welcome to Atomic hawks</p>
-                            </header>
-                        </section>
+                </section>
 
-
-                        <section>
-                            {% block content %}
-                            {% endblock %}
-                        </section>
 
                     
                     <!-- Footer -->
