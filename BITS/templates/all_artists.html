@@ -7,8 +7,10 @@
 
 <table>
     <tr>
-        {% for Artist in ARTLst %}     
-           <a href="./album/{{Album.id}}"><td>{{Artist.title}}: <br> <img src="{{Artist.image.url}}" alt="Artist Cover Image" width="180px"></td></a>        
+        {% for Artist in ARTLst %}
+        <td>     
+           <a href="./album/{{Album.id}}"><td>{{Artist.title}}: <br> <img src="{{Artist.image.url}}" alt="Artist Cover Image" width="180px"></td></a>
+        </td>   
         {% endfor %}
     </tr>
 </table>
