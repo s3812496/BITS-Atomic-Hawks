@@ -8,7 +8,7 @@
 
     <p>Spotify: <iframe src="https://open.spotify.com/embed/track/{{Song.Spotify_Embeded_Code}}" width="15%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe></p>
 
-    <p>Album: <a href="">{{Song.album.title}}</a></p>
-    <p>Artist: <a href="">{{Song.artist.title}}</a></p>
+    <p>Album: <a href="/album{{Song.album.id}}">{{Song.album.title}}</a></p>
+    <p>Artist: <a href="/artist{{Song.artist.id}}">{{Song.artist.title}}</a></p>
 </body>
 {% endblock %}
