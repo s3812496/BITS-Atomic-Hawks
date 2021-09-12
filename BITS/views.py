@@ -1,3 +1,4 @@
+from django.http.request import HttpRequest
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Song, Artist, Album
@@ -10,4 +11,4 @@ def index(request):
 def song_by_id(request, Song_id):
     song = Song.objects.get(pk=Song_id)
     context=context = {'Song':Song}
-    return render(request, 'index.html')
+    return HttpResponse("Song Name {Song.Title}")
