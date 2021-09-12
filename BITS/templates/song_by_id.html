@@ -1,9 +1,9 @@
+{% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
 <!DOCTYPE html>
 
-<body>
+
     <h1>Title: {{Song.title}}</h1>
 
     <img src="{{Song.album.image.url}}" alt="Cover Art for: {{Song.album.title}}" height="180px">
@@ -15,5 +15,5 @@
 
     <p>Album: <a href="/album/{{Song.album.id}}">{{Song.album.title}}</a></p>
     <p>Artist: <a href="/artist/{{Song.artist.id}}">{{Song.artist.title}}</a></p>
-</body>
+
 {% endblock %}
