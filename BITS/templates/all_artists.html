@@ -7,17 +7,9 @@
 
 <table>
     <tr>
-        
         {% for Artist in ARTLst %}     
-            {% if Artist.id|divisibleby:3 %}
-                </tr>
-                    <td>{{Artist.title}}: <br> <img src="{{Artist.image.url}}" alt="Artist Cover Image" width="180px"></td>
-                <tr>
-            {% endif %}
-            <td>{{Artist.title}}: <br> <img src="{{Artist.image.url}}" alt="Artist Cover Image" width="180px"></td>        
+           <a href="./album/{{Album.id}}"><td>{{Artist.title}}: <br> <img src="{{Artist.image.url}}" alt="Artist Cover Image" width="180px"></td></a>        
         {% endfor %}
-
-
     </tr>
 </table>
 
