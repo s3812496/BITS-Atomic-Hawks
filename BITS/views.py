@@ -2,10 +2,12 @@ from django.http.request import HttpRequest
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Song, Artist, Album
+from .forms import ContactForm
 
 # Create your views here.
 def contactus(request):
-    return render(request, 'contact_us.html')
+    form = ContactForm
+    return render(request, 'contact_us.html', {'from': form})
 
 def index(request):
     return render(request, 'index.html')
