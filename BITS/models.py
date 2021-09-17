@@ -35,7 +35,7 @@ class Song(models.Model):
         return self.title
 
 class Contact(models.Model):
-    name = models.CharField()
-    email = models.CharField()
-    phone = models.CharField()
-    body = models.CharField()
+    name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    phone = models.CharField(max_length=200)
+    body = models.TextField()
