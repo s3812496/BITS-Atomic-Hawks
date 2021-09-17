@@ -8,13 +8,16 @@ from .forms import ContactForm
 def contactus(request):
     form = ContactForm
     if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        phone = request.POST['phone']
-        body = request.POST['phone']
-        ins = Contact(name=name, email=email, phone=phone, body=body)
-        ins.save()
-        
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            phone = form.cleaned_data['phone']
+            body = form.cleaned_data['body']
+            ins = Contact(name=name, email=email, phone=phone, body=body)
+            ins.save()
+            
+    form = ContactForm()    
     return render(request, 'contact_us.html', {'from': form})
 
 def index(request):
