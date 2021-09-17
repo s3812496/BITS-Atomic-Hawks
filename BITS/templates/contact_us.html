@@ -5,8 +5,10 @@
 
 <body>
     <h1>Contact Us</h1>
-    {% csrf_token %}
-    {{ from }}
-    <button type="submit">Submit</button>
+    <form action="post">
+        {% csrf_token %}
+        {{ from }}
+        <button type="submit">Submit</button>
+    </form>
 </body>
 {% endblock %}
