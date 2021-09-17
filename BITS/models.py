@@ -33,3 +33,9 @@ class Song(models.Model):
 
     def __str__(self):
         return self.title
+
+class Contact(models.model):
+    name = models.CharField()
+    email = models.CharField()
+    phone = models.CharField()
+    body = models.CharField()

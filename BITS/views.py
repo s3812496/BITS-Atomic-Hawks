@@ -3,10 +3,19 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Song, Artist, Album
 from .forms import ContactForm
+from BITS import models
 
 # Create your views here.
 def contactus(request):
     form = ContactForm
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        body = request.POST['phone']
+        ins = models.Contact(name=name, email=email, phone=phone, body=body)
+        ins.save()
+        
     return render(request, 'contact_us.html', {'from': form})
 
 def index(request):
