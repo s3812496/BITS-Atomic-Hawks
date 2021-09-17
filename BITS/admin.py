@@ -10,3 +10,6 @@ admin.site.register(Album)
 
 from .models import Artist
 admin.site.register(Artist)
+
+from .models import Contact
+admin.site.register(Contact)
