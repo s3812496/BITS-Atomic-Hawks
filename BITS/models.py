@@ -39,3 +39,6 @@ class Contact(models.Model):
     email = models.CharField(max_length=200)
     phone = models.CharField(max_length=200)
     body = models.TextField()
+
+    def __str__(self):
+        return self.name
