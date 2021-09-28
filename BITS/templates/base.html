@@ -29,6 +29,7 @@
                         <li class="search">
                             <a class="fa-search" href="#search">Search</a>
                             <form id="search" method="POST" action="{% url 'searchpage' %}">
+                            	{% csrf_token %}
                                 <input type="text" name="query" placeholder="Search" />
                             </form>
 
