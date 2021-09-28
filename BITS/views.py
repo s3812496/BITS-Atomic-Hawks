@@ -54,4 +54,12 @@ def about_us(request):
     return render(request, 'about_us.html')
 
 def search(request):
-    return render(request, 'search.html')
+    if request.method == 'POST':
+        query = request.POST['query']
+        results = Album.objects.filter(name_contains=query)
+
+        return render(request, 'search.html', {'query' : query, 'results' : results})
+    else:
+        return render(request, 'search.html')
+
+    
