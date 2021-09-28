@@ -56,7 +56,7 @@ def about_us(request):
 def search(request):
     if request.method == 'POST':
         query = request.POST['query']
-        models =[{Artist, 'Artist'}, {Album, 'Album'},  {Song, 'Song'}]
+        models =[(Artist, 'Artist'), (Album, 'Album'),  (Song, 'Song')]
         results = dict()
         for model in models:
             results.update({f"results_{model[1]}": model[0].objects.filter(title__icontains = query)})
