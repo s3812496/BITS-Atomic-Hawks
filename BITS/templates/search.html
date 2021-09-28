@@ -20,7 +20,7 @@
         </article>
         {% endfor %}
 
-        {% for each_result in results_album %}
+        {% for each_result in results_albums %}
         <article class="mini-post">
             <a href="{% url 'album_by_id' each_result.id %}">{{ each_result }}</a>
         </article>
