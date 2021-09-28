@@ -56,10 +56,11 @@ def about_us(request):
 def search(request):
     if request.method == 'POST':
         query = request.POST['query']
-        results_artist = Artist.objects.filter(title__icontains=query)
-        results_albums = Album.objects.filter(title__icontains=query)
-        results_songs = Song.objects.filter(title__icontains=query)
-        return render(request, 'search.html', {'query' : query, 'results_artist' : results_artist, 'results_albums' : results_albums, 'results_songs' : results_songs})
+        models =[Artist, Album, Song]
+        results = dict()
+        for model in models:
+            results.update({f"results_{model}": model.objects.filter(title__icontains=query)})
+        return render(request, 'search.html', {'query' : query, 'results_Artist' : results_Artist, 'results_Album' : results_Album, 'results_Song' : results_Songs})
     else:
         return render(request, 'search.html')
 
