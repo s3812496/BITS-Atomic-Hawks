@@ -57,7 +57,6 @@ def search(request):
     if request.method == 'POST':
         query = request.POST['query']
         results = Album.objects.filter(name_contains=query)
-
         return render(request, 'search.html', {'query' : query, 'results' : results})
     else:
         return render(request, 'search.html')
