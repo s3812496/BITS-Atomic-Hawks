@@ -11,5 +11,6 @@ urlpatterns = [
     path('allartists/', views.all_artists, name='allartists'),
     path('allalbum/', views.all_album, name='allalbum'),
     path('aboutus', views.about_us, name='aboutus'),
+    path('search', views.search, name='searchpage'),
     path('', views.index, name='index'),
 ]
