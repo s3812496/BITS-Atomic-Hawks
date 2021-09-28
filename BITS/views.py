@@ -56,9 +56,9 @@ def about_us(request):
 def search(request):
     if request.method == 'POST':
         query = request.POST['query']
-        results_artist = artist.objects.filter(title__icontains=query)
-        results_albums = album.objects.filter(title__icontains=query)
-        results_songs = song.objects.filter(title__icontains=query)
+        results_artist = Artist.objects.filter(title__icontains=query)
+        results_albums = Album.objects.filter(title__icontains=query)
+        results_songs = Song.objects.filter(title__icontains=query)
         return render(request, 'search.html', {'query' : query, 'results_artist' : results_artist, 'results_albums' : results_albums, 'results_songs' : results_songs})
     else:
         return render(request, 'search.html')
